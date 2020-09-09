@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="T1907A.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1907A"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" x:Name="Email" HorizontalAlignment="Left" PlaceholderText="Người nhận" Margin="100,100,0,30" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="329" RenderTransformOrigin="0.411,0.383"/>
+            <TextBox Grid.Row="1" x:Name="Tieude" HorizontalAlignment="Left" PlaceholderText="Tiêu đề" Margin="100,30,0,30" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="329" TextChanged="TextBox_TextChanged"/>
+            <TextBox Grid.Row="2" x:Name="Noidung" HorizontalAlignment="Left" PlaceholderText="Nội dung" Margin="100,30,0,30" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="329"/>
+            <Button  Grid.Row="3" x:Name="btnSubmit" Content="Send&#xD;&#xA;&#xA;" Margin="100,30,0,30" VerticalAlignment="Top"  Height="86" Width="206" Click="btnSubmit_Click"/>
+        </Grid>
+        
+        <ListView Grid.Column="1" x:Name="E" Margin="47,91,38,378" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <ListView.RenderTransform>
+                <CompositeTransform Rotation="-0.444"/>
+            </ListView.RenderTransform>
+            <DataTemplate>
+                <ListViewItem>
+                    <TextBlock></TextBlock>
+                </ListViewItem>
+            </DataTemplate>
+        </ListView>
+
+
+    </Grid>
+</Page>
