@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Food.Quesstion2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Food"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <RelativePanel>
+            <TextBox x:Name="tbUsername" PlaceholderText="nhap username" Width="200"/>
+            <TextBox x:Name="tbPass" PlaceholderText="nhap pass" RelativePanel.Below="tbUsername" Width="200"/>
+
+            <Button x:Name="btnDangKi" Content="Dangki" Click="btnDangKi_Click" RelativePanel.Below="tbPass"/>
+            <Button x:Name="btnDangNhap" Content="DangNhap" RelativePanel.RightOf="btnDangKi" RelativePanel.Below="tbPass" Click="btnDangNhap_Click"/>
+        </RelativePanel>
+
+    </Grid>
+</Page>
